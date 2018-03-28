@@ -15,7 +15,7 @@
 import caffe
 import os
 
-from utils import imread
+import cv2
 from pipeline_init import pipeline_init
 from pipeline_forword import pipeline_forword
 from pipeline_show_results import pipeline_show_results
@@ -33,7 +33,7 @@ for i in range(len(name_list)):
     img_name = image_path + name_list[i]
     if not os.path.exists(img_name):
         continue
-    img = imread(img_name)
+    img = cv2.imread(img_name)#img in B-G-R mode
     
     # forward
     prediction = pipeline_forword(img, pipeline)
