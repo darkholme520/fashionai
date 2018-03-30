@@ -51,9 +51,9 @@ def pipeline_init( model_type , poj_path):
 
     # create net and load weights
     net_stage1 = caffe.Net(model_stage1, weights_stage1, caffe.TEST) 
-    net_stage2 = caffe.Net(model_stage2, weights_stage2, 'test')
-    net_stage3_easy = caffe.Net(model_stage3, weights_stage3_easy, 'test')
-    net_stage3_hard = caffe.Net(model_stage3, weights_stage3_hard, 'test')
+    net_stage2 = caffe.Net(model_stage2, weights_stage2, caffe.TEST)
+    net_stage3_easy = caffe.Net(model_stage3, weights_stage3_easy, caffe.TEST)
+    net_stage3_hard = caffe.Net(model_stage3, weights_stage3_hard, caffe.TEST)
 
     pipeline = {
         'num_points':num_points,
